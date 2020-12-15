@@ -1,0 +1,863 @@
+body {
+    background-color: #FFDAB9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.area-botões {
+    z-index: 1030;
+    top: 120px;
+}
+
+.botão-login {
+    padding: 5px 10px;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    background-color: #F08080;
+    border: 2px solid #F8AD9D;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+
+}
+
+.botão-login:hover {
+    color: #F08080;
+    background-color: white;
+
+}
+
+.botão-login:focus {
+    box-shadow: none;
+}
+
+.botão-cadastrar {
+    padding: 5px 10px;
+    color: white;
+    font-size: 30px;
+    background-color: #F08080;
+    border: 2px solid #F8AD9D;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+.botão-cadastrar:hover {
+    color: #F08080;
+    background-color: white;
+}
+
+.botão-cadastrar:focus {
+    box-shadow: none;
+}
+
+.area-principal {
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 100px;
+    height: 600px;
+    background-color: #FBC4AB;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+
+.imagem-home {
+    width: 400px;
+}
+
+.area-texto {
+    padding-left: 30px;
+    padding-top: 100px;
+}
+
+.area-img {
+    padding-left: 100px;
+    padding-top: 150px;
+}
+
+.titulo-home {
+    font-size: 60px;
+    color: #F08080;
+    font-weight: 900;
+}
+
+.texto-home {
+    color: white;
+    font-size: 20px;
+}
+
+.área-rodapé {
+    line-height: 50px;
+    color: white;
+    height: 50px;
+    background-color: #F08080;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 200px;
+}
+
+.área-rodapé span {
+    margin: 30px;
+    font-size: 25px;
+}
+
+/*Estilo para o modal do login */
+
+.área-modal {
+    border: none;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 400px;
+    background-color: white;
+}
+
+.titulo-modal {
+    text-align: center;
+    margin: 20px;
+}
+
+.titulo-modal h1 {
+    font-size: 25px;
+    color: #F08080;
+
+}
+
+.logo {
+    width: 120px;
+}
+
+.titulo-login {
+    text-align: center;
+}
+
+.rodape-modal {
+    margin-top: 20px;
+}
+
+.corpo-modal {
+    text-align: center;
+}
+
+#formLogin div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-botao-entrar {
+    width: 100px;
+    margin: 10px auto;
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+    background-color: #F08080;
+    border: 2px solid #F8AD9D;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+.login-botao-entrar:focus {
+    border: 2px solid #F8AD9D;
+    box-shadow: none;
+
+}
+
+.login-botao-entrar:hover {
+    border: 2px solid #F8AD9D;
+    color: #F08080;
+    background-color: white;
+    box-shadow: none;
+    transition-duration: 0.4s;
+}
+
+
+
+
+
+.login-botao-cadastrar {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+    background-color: #F08080;
+    border: 2px solid #F8AD9D;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+
+.login-botao-cadastrar:hover {
+    text-decoration: none;
+    border: 2px solid #F8AD9D;
+    color: #F08080;
+    background-color: white;
+}
+
+
+
+
+
+/*Estilo para a área de match/conversa*/
+
+.área-match-perfil {
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 100px;
+    height: 600px;
+    background-color: #FBC4AB;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.área-conversas {
+    margin-top: 10px;
+    background-color: white;
+    height: 460px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1px solid rgba(240, 128, 128, 0.5);
+    border-right: none;
+}
+
+.área-matchs {
+    border: 1px solid rgba(240, 128, 128, 0.5);
+    border-left: none;
+    margin-top: 10px;
+    background-color: white;
+    height: 460px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.cabeçalho-match {
+    text-align: center;
+}
+
+.logo-cabeçalho-match {
+    position: relative;
+    top: 25px;
+    width: 100px;
+}
+
+.card-match {
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px auto;
+    height: 400px;
+    background-color: #FFDAB9;
+}
+
+.topo-match {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #F8AD9D;
+    height: 50px;
+}
+
+.conteúdo-match {
+    height: 280px;
+    text-align: left;
+    color: white;
+    padding: 20px;
+}
+
+.imagem-perfil-match {
+    width: 100%;
+    height: 100%;
+}
+
+.dados-match {
+    text-shadow: 1px 1px black;
+    z-index: 1030;
+    padding: 10px;
+    top: 240px;
+    position: absolute;
+    max-width: 280px;
+}
+
+.dados-match .nome-perfil-match {
+    font-size: 30px;
+}
+
+.botões-match-laterais {
+    width: 50px;
+}
+
+.botões-match-centro {
+    width: 70px;
+}
+
+
+.rodapé-match {
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #F8AD9D;
+    height: 70px;
+}
+
+
+
+
+/*Configuração carousel match*/
+
+.fa-angle-left,
+.fa-angle-right {
+    font-size: 100px;
+    color: #F08080;
+}
+
+
+
+.cabeçalho-perfil {
+    padding: 0;
+    height: 100px;
+}
+
+
+.imagem-usuário {
+    border-radius: 40px;
+    border: 2px solid #FBC4AB;
+    width: 80px;
+    height: 80px;
+
+}
+
+.imagem-usuário:hover {
+    border-radius: 40px;
+    width: 80px;
+    box-shadow: 0px 1px 50px rgba(255, 255, 255, 1);
+}
+
+.DropMenuPerfil {
+    z-index: 1080;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    margin-top: 40px;
+
+}
+
+.imgDropmenu {
+    position: absolute;
+    top: -40px;
+    left: 5px;
+    width: 40px;
+}
+
+a.dropitens {
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #F08080;
+    padding: 10px;
+    display: block;
+}
+
+
+.nome-usuário {
+    padding-left: 10px;
+    color: white;
+    font-size: 35px;
+}
+
+.caixa-conversas {
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 10px;
+    height: 440px;
+    background-color: #F8AD9D;
+}
+
+.caixa-conversas .favorite-icon {
+    width: 20px;
+    position: relative;
+    bottom: 20px;
+}
+
+.caixa-conversas::-webkit-scrollbar {
+    width: 0px;
+
+}
+
+.mensagem {
+    height: 50px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
+
+.imagem-usuário-mensagem {
+    border-radius: 40px;
+    border: 3px solid white;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0px 1px 5px 1px #F08080;
+}
+
+.usuário-mensagem {
+    margin-bottom: 10px;
+}
+
+
+
+
+.área-formulário {
+    text-shadow: 1px 1px 1px black;
+    font-size: 20px;
+    color: white;
+    margin: 20px auto;
+    width: 400px;
+}
+
+
+.caixa-de-entrada:focus {
+    border: 1px solid #F08080;
+    box-shadow: 1px 1px 10px #F08080 !important;
+
+}
+
+
+.area-pagina-cadastro {
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 100px;
+    height: 600px;
+    background-color: #FBC4AB;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.area-cadastro {
+    font-weight: 600;
+    color: #F08080;
+    margin-top: 50px;
+}
+
+.area-cadastro label {
+    text-shadow: 0px 1px 2px #FFDAB9;
+}
+
+#error {
+    font-size: 12px;
+}
+
+.formulariocadastro {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #F08080;
+}
+
+.formulariocadastro:focus {
+    box-shadow: 0px 1px 10px #F08080;
+    ;
+    border: 1px solid #F08080;
+}
+
+.botao-cadastro {
+    padding: 5px 10px;
+    color: white;
+    background-color: #F08080 !important;
+    border: 2px solid #F8AD9D !important;
+    border-radius: 5px;
+    box-shadow: none !important;
+    transition-duration: 0.4s;
+}
+
+.botao-cadastro:hover {
+    color: #F08080 !important;
+    background-color: white !important;
+    border: 2px solid #F8AD9D;
+    border-radius: 5px;
+    box-shadow: none !important;
+}
+
+.erro {
+    box-shadow: 0px 1px 10px rgba(255, 0, 0, 0.5);
+    border: 2px solid red;
+}
+
+#error,
+#error2 {
+    color: white;
+}
+
+.area-placa-cadastro {
+    color: white;
+    background: url(img/logo.png);
+    padding: 100px;
+    text-align: center;
+    border-radius: 10px;
+    height: 500px;
+    background-color: #F08080;
+    font-size: 20px;
+}
+
+.botão-login-cadastro {
+    font-size: 25px;
+    padding: 5px 10px;
+    color: #F08080;
+    background-color: white !important;
+    border: 2px solid #F8AD9D !important;
+    border-radius: 10px;
+    box-shadow: none !important;
+    transition-duration: 0.4s;
+}
+
+.botão-login-cadastro:hover {
+    font-size: 25px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #FBC4AB !important;
+    border: 2px solid #F8AD9D !important;
+    border-radius: 10px;
+    box-shadow: none !important;
+    transition-duration: 0.4s;
+}
+
+/*Estilização da área do perfil*/
+
+#area-config-perfil {
+    margin-top: -2px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 9px;
+    border-right: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: 1060;
+    left: 0px;
+    position: absolute;
+    height: 460px;
+    display: none;
+    transition: all 0.3s ease;
+    text-align: center;
+
+}
+
+#area-config-perfil-2 {
+    margin-top: -2px;
+    padding: 10px;
+    border-radius: 9px;
+    border: 1px solid white;
+    border-left: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    z-index: 1060;
+    left: 0px;
+    position: absolute;
+    height: 460px;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.area-config-on {
+    display: block !important;
+    background-color: rgba(244, 151, 142, 0.8) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+.imagem-perfil-edit{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+.imagem-perfil-edit:hover{
+    border-radius: 50px;
+    box-shadow: 0px 1px 50px rgba(255, 255, 255, 1);
+}
+.fa-edit{
+    color: white;
+}
+.fa-edit:hover{
+    text-shadow: 0px 0px 10px #FFDAB9;
+}
+.caxa-descrição{
+    padding: 10px;
+    text-align: left;
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+}
+#form-imagem{
+    display: none;
+}
+#inputNomePerfil{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0) !important;
+    box-shadow: none !important;
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    outline: none !important;
+}
+#inputNomePerfil:focus{
+    border-radius: 10px;
+    border: 3px solid #F08080;
+}
+.caixa-descrição{
+    margin-top: 10px;
+    color: white;
+}
+.caixa-descrição h4{
+    text-align: left;
+    font-size: 20px;
+}
+#form-descricao-perfil-edit{
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    height: 150px;
+    width: 100%;
+    outline: none;
+    resize: none;
+}
+#form-descricao-perfil-edit:focus{
+    border: 3px solid #F08080;
+}
+.botão-submit-primeira-parte-perfil{
+    text-align: left;
+}
+.perfil-edit-posicoes{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+.perfil-edit-posicoes div{
+    display: inline-block;
+    margin-right: 20px;
+}
+.perfil-edit-posicoes input{
+    display: none;
+}
+.perfil-edit-posicoes label{
+   font-size: 25px;
+   cursor: pointer;
+   padding: 10px;
+   border-radius: 10px;
+}
+.perfil-edit-posicoes [name=lane]:checked ~ label{
+    text-shadow: 0px 0px 10px white;
+    border-radius: 0 !important;
+    border-bottom: 1px solid white;
+}
+.perfil-edit-idade{
+    color: white;
+    margin-top: 20px;
+}
+.perfil-edit-idade input{
+    text-align: center;
+    width: 50px;
+    outline: none;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+.perfil-edit-idade input:focus{
+    border: 3px solid #F08080;
+}
+.perfil-edit-nicklol{
+    margin-top: 20px;
+    color: white;
+}
+.perfil-edit-nicklol input{
+    outline: none;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+.perfil-edit-nicklol input:focus{
+    border: 3px solid #F08080;
+}
+.botão-submit-primeira-parte-perfil button,.botão-submit-segunda-parte-perfil button{
+    padding: 5px;
+    margin-top: 20px;
+    outline: none;
+    color: #F08080;
+    background-color: white !important;
+    border: 2px solid #F8AD9D !important;
+    border-radius: 5px;
+    box-shadow: none !important;
+    transition-duration: 0.4s;
+}
+.botão-submit-primeira-parte-perfil button:hover,.botão-submit-segunda-parte-perfil button:hover{
+    color: white;
+    background-color: #F08080 !important;
+    border: 1px solid white !important;
+    border-radius: 5px;
+    box-shadow: none !important;
+    transition-duration: 0.4s;
+
+}
+
+/*Edições da parte da caixa de mensagens full*/
+
+#area-mensagens-full{
+    height: 450px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    position: absolute;
+    left: 0px;
+    background-color: white;
+    z-index: 1050;
+    display: none;
+}
+.area-mensagens-full-on{
+    display: block !important;
+}
+.caixa-conversas-full{
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    /* height: 440px; */
+    background-color: #F8AD9D;
+}
+
+.caixa-conversas-full .sendMessage textarea {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.clicavel{
+    cursor: pointer;
+    color: inherit;
+}
+.clicavel:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cabecalho-mensagem-full{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.imagem-usuário-mensagem-full{
+    border-radius: 30px;
+    border: 3px solid white;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 1px 5px 1px #F08080;
+
+}
+.nome-usuário-mensagem1{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.área-botão-fechar{
+   position: absolute;
+   right: 10px;
+   top: 10px;
+}
+.fa-times{
+    cursor: pointer;
+    font-size: 40px;
+}
+.fa-times:hover{
+    text-shadow: 0px 0px 5px white;
+
+}
+.caixa-mensagem-full{
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: white;
+    height: 260px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.caixa-mensagem-full .message-block {
+    display: flex;
+}
+.caixa-mensagem-full .message-block .wrapper {
+    background-color: #80808014;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    min-width: 60px;
+}
+.caixa-mensagem-full .message-block .wrapper p {
+    margin-bottom: 5px;
+}
+.caixa-mensagem-full .message-block .wrapper .time {
+    color: gray;
+    font-size: 0.6em;
+}
+.caixa-mensagem-full .message-block.right {
+    justify-content: flex-end;
+    text-align: right;
+}
+.caixa-mensagem-full .message-block.right .wrapper{
+    background-color: #FFDAB9;
+}
+.área-mensagens-enviadas{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    height: 240px;
+}
+.área-de-enviar-mensagens{
+    border-radius: 10px;
+    background-color: rgba(248, 173, 157, 0.7);
+    height: 60px;
+}
+.área-mensagem-enviada, .área-mensagem-recebida{
+    height: fit-content;
+    padding: 10px;
+    display: inline-block;
+    text-align: justify;
+    margin: 20px;
+    border: 1px solid red;
+}
+.imagem-usuario-enviado, .imagem-usuario-recebida{
+    width: 50px;
+    border-radius: 50%;
+    text-align: end;
+}
+
+
+
+
+
+#caixa-de-envio-mensagem{
+    border: 2px solid white;
+    outline: none;
+    margin: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 450px !important;
+    resize: none;
+}
+#caixa-de-envio-mensagem:focus{
+    border: 2px solid #F08080;
+
+}
+
+
+
+#botão-envio-mensagem{
+    position: absolute;
+    margin-top: 15px;
+}

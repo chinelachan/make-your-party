@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Your Party</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/logo.png">
+    <script src="https://kit.fontawesome.com/de293d76b1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="criaPerfil()">
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 área-match-perfil">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 cabeçalho-perfil">
+                                <a role="button" id="dropdownMenuPerfil" data-toggle="dropdown">
+                                    <img id="img-user" class="imagem-usuário" src="img/imagem-user.png">
+                                </a>
+                                <div class="dropdown-menu DropMenuPerfil" aria-labelledby="dropdownMenuPerfil">
+                                    <svg class="imgDropmenu" xmlns="http://www.w3.org/2000/svg" width="76" height="70"
+                                        viewBox="0 0 76 70">
+                                        <path id="Polygon_1" data-name="Polygon 1" d="M38,0,76,70H0Z" fill="#fff" />
+                                    </svg>
+                                    <a id="botãoPerfilLogado" onclick="configBotãoPerfilConfig()" class="dropitens"
+                                        href="#">Perfil</a>
+                                    <a id="botãoPerfilMatch" onclick="configBotãoMatchConfig()" class="dropitens"
+                                        href="#">Matchs</a>
+                                    <a class="dropitens" href="index.html">Sair</a>
+                                </div>
+                                <span id="username" class="nome-usuário"></span>
+                            </div>
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 cabeçalho-match">
+                                <img class="logo-cabeçalho-match" src="img/logo-2.png">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 área-conversas">
+                                <div id="area-config-perfil" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <form onsubmit="saveProfileChanges()">
+                                        <div>
+                                            <label for="form-imagem">
+                                                <img id="img-form-imagem" class="imagem-perfil-edit"
+                                                    src="img/imagem-user.png">
+                                            </label>
+                                            <input 
+                                                id="form-imagem" 
+                                                type="file" 
+                                                name="form-imagem" 
+                                                accept=".jpg,.png"
+                                                onchange="updateImage(event)">
+                                        </div>
+                                        <div class="config-form-nome-perfil">
+                                            <input type="text" id="inputNomePerfil"/>
+                                        </div>
+                                        <div class="caixa-descrição">
+                                            <h4>Descrição:</h4>
+                                            <textarea maxlength="200" id="form-descricao-perfil-edit"></textarea>
+                                        </div>
+                                        <div class="botão-submit-primeira-parte-perfil">
+                                            <button type="submit">Salvar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 caixa-conversas">
+
+                                            <h4>Likes</h4>
+                                            <div id="likesContainer" class="container">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8 área-matchs">
+                                <div class="container">
+                                    <div class="row">
+                                        <div id="area-config-perfil-2"
+                                            class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <form>
+                                                <div class="perfil-edit-posicoes">
+                                                    <h4>Posição Preferida:</h4>
+                                                    <div>
+                                                        <input id="radio-lane-top" name="lane" type="radio" value="top">
+                                                        <label for="radio-lane-top">Top Laner</label>
+                                                    </div>
+                                                    <div>
+                                                        <input id="radio-lane-jungler" name="lane" type="radio" value="jungler">
+                                                        <label for="radio-lane-jungler">Jungler</label>
+                                                        
+                                                    </div>
+                                                    <div>
+                                                        <input id="radio-lane-mid" name="lane" type="radio" value="mid">
+                                                        <label for="radio-lane-mid">Mid Laner</label>
+                                                        
+                                                    </div>
+                                                    <div>
+                                                        <input id="radio-lane-adc" name="lane" type="radio" value="adc">
+                                                        <label for="radio-lane-adc">ADC</label>
+                                                    </div>
+                                                    <div>
+                                                        <input id="radio-lane-sup" name="lane" type="radio" value="sup">
+                                                        <label for="radio-lane-sup">Suporte</label>
+                                                    </div>
+                                                </div>
+                                                <div class="perfil-edit-idade">
+                                                    <label for="idade-perfil-edit">
+                                                        <h4>Insira a sua Idade:</h4>
+                                                    </label><br>
+                                                    <input min="0" max="99" id="idade-perfil-edit"
+                                                        name="idade-perfil-edit" type="number">
+                                                </div>
+                                                <div class="perfil-edit-nicklol">
+                                                    <label for="nicklol-perfil-edit">
+                                                        <h4>Insira o seu nick atual no League of Legends:</h4>
+                                                    </label><br>
+                                                    <input type="text" id="nicklol-perfil-edit"
+                                                        name="nicklol-perfil-edit">
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                        <div id="area-mensagens-full"
+                                            class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                                            <div id="chat"
+                                                class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 caixa-conversas-full">
+                                                <div class="container">
+                                                    <div class="row cabecalho-mensagem-full">
+                                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                            <img class="imagem-usuário-mensagem-full"
+                                                                src="rikume/imagem-mensagem1-rikume.png">
+                                                            <span class="nome-usuário-mensagem1">JioJio</span>
+                                                            <div class="área-botão-fechar">
+                                                                <a onclick="fechaCaixaMensagem()"
+                                                                    id="fecha-mensagem-full"><i
+                                                                        class="fas fa-times"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="caixa-mensagem-full">
+                                                        <div class="message-block">
+                                                            <div class="wrapper">
+                                                                <p>
+                                                                    Teste
+                                                                </p>
+                                                                <div class="time">
+                                                                    05/12/20 12:42
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="message-block right">
+                                                            <div class="wrapper">
+                                                                <p>
+                                                                    Teste
+                                                                </p>
+                                                                <div class="time">
+                                                                    05/12/20 12:42
+                                                                </div>
+                                                            </div>
+                                                        </div>  
+                                                        <div class="message-block">
+                                                            <div class="wrapper">
+                                                                <p>
+                                                                    Teste
+                                                                </p>
+                                                                <div class="time">
+                                                                    05/12/20 12:42
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="message-block right">
+                                                            <div class="wrapper">
+                                                                <p>
+                                                                    Teste
+                                                                </p>
+                                                                <div class="time">
+                                                                    05/12/20 12:42
+                                                                </div>
+                                                            </div>
+                                                        </div>     
+                                                        <div class="message-block right">
+                                                            <div class="wrapper">
+                                                                <p>
+                                                                    Teste
+                                                                </p>
+                                                                <div class="time">
+                                                                    05/12/20 12:42
+                                                                </div>
+                                                            </div>
+                                                        </div>   
+                                                        <div class="message-block">
+                                                            <div class="wrapper">
+                                                                <p>
+                                                                    Teste
+                                                                </p>
+                                                                <div class="time">
+                                                                    05/12/20 12:42
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sendMessage">
+                                                        <form onsubmit="sendMessageTo(2, event)">
+                                                            <textarea id="message" name="message"></textarea>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <dvi class="container">
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                                                        <div id="carouselExampleControls" class="carousel slide"
+                                                            data-interval="false">
+                                                            <div id="carousel" class="carousel-inner">
+                                                            </div>
+                                                            <a id="carousel-next" style="display: none;" class="carousel-control-next"
+                                                                href="#carouselExampleControls" role="button"
+                                                                data-slide="next">
+                                                                <i class="fas fa-angle-right"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </dvi>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 área-rodapé">
+
+                    <span><i class="fab fa-facebook"></i></span>
+                    <span><i class="fab fa-discord"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="script.js"></script>   
+    <script src="logado.js"></script>
+</body>
+
+</html>
